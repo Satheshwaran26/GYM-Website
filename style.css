@@ -1,66 +1,120 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif; 
-    margin: 0;
-    font-family: "Poppins", sans-serif; 
-    background: url('bg\ gym.jpg') no-repeat center center fixed; /* Center and fix the background */
-    background-size: cover; /* Make the image cover the entire screen */
-    color: #333;
-  
+  font-family: "Poppins", sans-serif;
+  background: url('./Assets/bg%20gym.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #333;
 }
+
+/* Base Navbar Styling */
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 15px;
   border: 1px groove silver;
-   background-color: #fefdfd;
+  background-color: #fefdfd;
   border-radius: 50px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 40%; /* Restricts width for responsiveness */
-  margin: 40px auto; /* Centers navbar horizontally */
+  max-width: 40%;
+  margin: 20px auto;
+  position: relative;
+  z-index: 10;
 }
 
-/* Logo Styling */
 .navbar .logo {
   font-size: 30px;
-  font-weight: 400; /* Makes the logo text bold */
+  font-weight: 400;
   color: #333;
   text-decoration: none;
-  margin-right: auto; /* Pushes the logo to the far left */
 }
 
-/* Styling all navbar links */
-.navbar a {
-  margin: 0 15px;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 400;
   font-size: 1em;
 }
 
-/* Styling the Contact button */
-.navbar a.contact {
+.navbar .contact {
   border: 1px solid #333;
-  padding: 5px 20px;
+  padding: 5px 15px;
   border-radius: 20px;
-  margin-left: auto; /* Pushes contact button to the far right */
+  margin-left: 100px;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile Menu Styling */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #fefdfd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 20;
+}
+
+.mobile-menu a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 400;
+  display: block;
+}
+
+/* Mobile Menu Open State */
+.mobile-menu.open {
+  display: flex;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 13px 13px;
+  }
+
+  .navbar {
+    background-color: none;
+    box-shadow: none;
+    border: none;
+    max-width: 80%;
+  }
 }
 
 .hero {
   position: relative;
   display: flex;
-  justify-content: space-between; /* Adjust space between text and image */
-  align-items: center; /* Center vertically */
+  justify-content: space-between;
+  align-items: center;
   padding: 50px;
-  max-width: 1700px; /* Max width of the hero section */
-  margin: 0 auto; /* Center the hero section on larger screens */
- /* Full height of the viewport */
- height: max-content;
+  max-width: 1700px;
+  margin: 0 auto;
+  height: max-content;
 }
 
 .hero-text {
@@ -68,26 +122,27 @@ body {
   z-index: 1;
   margin-top: 60px;
   margin-bottom: 100px;
-
 }
 
 .hero-text h1 {
   font-size: 6em;
   font-weight: 700;
   margin: 0;
-  text-align: left; /* Ensure text is aligned left */
+  text-align: left;
 }
-.hero-text h2{
+
+.hero-text h2 {
   font-size: 4em;
-color:transparent;
--webkit-text-stroke: 1px rgb(0, 0, 0);
-margin-bottom: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  margin-bottom: 0;
 }
+
 .hero-text p {
   font-size: 18px;
   font-weight: 300;
   margin: 20px 0;
-  text-align: left; /* Ensure text is aligned left */
+  text-align: left;
 }
 
 .hero-buttons {
@@ -100,7 +155,7 @@ margin-bottom: 0;
   border: 2px solid #ccc;
   border-radius: 50px;
   background-color: #f5f5f5;
-  font-size:1.2em;
+  font-size: 1.2em;
   cursor: pointer;
   font-weight: lighter;
 }
@@ -110,12 +165,11 @@ margin-bottom: 0;
   z-index: 1;
 }
 
-
 .background-text {
   position: absolute;
   top: 80%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center vertically, left aligned */
+  transform: translate(-50%, -50%);
   font-size: 100px;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.05);
@@ -127,7 +181,6 @@ margin-bottom: 0;
   display: flex;
   justify-content: center;
   margin-top: 95px;
-
 }
 
 .scroll-down i {
@@ -141,7 +194,7 @@ margin-bottom: 0;
   .hero {
     padding: 30px;
   }
-  
+
   .hero-text {
     margin-right: 150px;
   }
@@ -153,8 +206,15 @@ margin-bottom: 0;
 
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column; /* Stack text and image vertically */
+    flex-direction: column;
     padding: 20px;
+  }
+
+  .hero-text h1 {
+
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
   }
 
   .hero-text {
@@ -164,7 +224,7 @@ margin-bottom: 0;
   }
 
   .hero-text h1 {
-    font-size: 3em;
+    font-size: 2.8em;
   }
 
   .hero-buttons {
@@ -175,15 +235,24 @@ margin-bottom: 0;
     max-width: 100%;
     margin-top: 20px;
   }
+
+  .hero-text p {
+    font-size: 16px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
   .hero-text h1 {
-    font-size: 2em;
+    font-size: 10px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
   }
 
   .hero-text p {
     font-size: 16px;
+    text-align: center;
   }
 
   .hero-image img {
@@ -194,4 +263,231 @@ margin-bottom: 0;
   .background-text {
     font-size: 50px;
   }
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+section {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #1b1a1a;
+  color: whitesmoke;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1600px;
+  width: 100%;
+  padding: 30px;
+}
+
+.form-container,
+#result {
+  flex: 1;
+  padding: 20px;
+}
+
+.form-container {
+  background-color: #201f1f;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+
+.form-container h1 {
+  font-size: 2.4em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 1.3em;
+}
+
+input,
+select {
+  color: whitesmoke;
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  background-color: #201f1f;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+button {
+  grid-column: span 2;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-weight: 500; 
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 25px;
+  background-color: transparent;
+  cursor: pointer;
+  color: whitesmoke;
+  border: 1px solid;
+  transition: all 0.5s ease;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 1px solid #333;
+}
+
+#result {
+  margin-left: 20px;
+  background-color: #201f1f;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.display {
+  color: #333;
+  font-size: 3em;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.result-title {
+  font-size: 2.4em;
+  color: #fff;
+  text-align: center;
+}
+
+.calorie-intake {
+  font-size: 2em;
+  color: #ffd700;
+  text-align: left;
+  padding: 10px;
+  font-weight: lighter;
+}
+
+.calorie-intake span {
+  background-color: #f7f7f619;
+  padding: 3px;
+}
+
+.recommended-foods {
+  font-size: 2em;
+  color: #00ff7f;
+  font-weight: lighter;
+}
+
+.food-list {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: left;
+  margin-left: 190px;
+}
+
+.food-item {
+  font-size: 1.6em;
+  color: #fff;
+  margin: 5px 0;
+  color: silver;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 280px;
+}
+
+.custom-select i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  color: whitesmoke;
+}
+
+.custom-select select {
+  width: 100%;
+  padding: 18px;
+  padding-left: 45px;
+  font-size: 20px;
+  border-radius: 25px;
+  border: none;
+  appearance: none;
+  background-color: #201f1f;
+  color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-image: none;
+}
+
+.custom-select select:hover,
+.custom-select select:focus {
+  border-color: #888;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+  
+  form {
+      grid-template-columns: 1fr;
+      width: 100%;
+  }
+  
+  button {
+      grid-column: span 1;
+  }
+  .custom-select {
+      width: 280px;
+  }
+  #result {
+      margin-left: 0;
+      margin-top: 30px;
+  }
+  .food-list {
+      list-style-type: none;
+      padding-left: 0;
+      text-align: left;
+      margin-left:15px;
+  }
+  .food-item {
+      font-size: 1.3em;
+      color: #fff;
+      margin: 5px 0;
+      color: silver;
+  }
+  .recommended-foods {
+      font-size: 1.6em;
+      color: #00ff7f;
+      font-weight: lighter;
+  }
+  .calorie-intake {
+      font-size: 1.8em;
+      color: #ffd700;
+      text-align: left;
+      padding: 10px;
+      font-weight: lighter;
+  }
+  
 }
