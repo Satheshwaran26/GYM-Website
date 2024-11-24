@@ -1,134 +1,209 @@
-<html>
- <head>
-  <title>
-   Fitness Strength
-  </title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
- </head>
- <body>
-<!--  -->
-<div class="navbar">
-  <a href="#" class="logo">GyM.</a>
-  <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Tracker</a>
-      <a href="#">WorkOut</a>
-      <a href="#">Testimonials</a>
-      <a class="contact" href="#">Contact</a>
-  </div>
-  <div class="hamburger">
-      <i class="fas fa-bars"></i>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="mobile-menu">
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Tracker</a>
-  <a href="#">WorkOut</a>
-  <a href="#">Testimonials</a>
-  <a class="contact" href="#">Contact</a>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tracker.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
+        integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
 
-  <!--  -->
-  <div class="hero">
-   <div class="hero-text">
-    <h2>Make Your</h2>
-    <h1>
-     Build You Strength.
-    </h1>
-    <p>
-     Lorem Ipsum is simply dummy text of the printing and typesetting industry
-    </p>
-    <div class="hero-buttons">
-     <button>
-      Workout
-     </button>
-     <button>
-      Tracker
-     </button>
-    </div>
-   </div>
- 
-    <!-- <div class="background-text">
-      FITNESS STRENGTH
-    </div> -->
-  </div>
-  <div class="scroll-down">
-   <i class="fas fa-chevron-down">
-   </i>
-  </div>
-
-  <section>
-    <div class="container">
-        <div class="form-container">
-            <h1>Calories Tracker</h1>
-            <form id="gymForm">
-                <div class="form-group">
-                    <label for="name">Name :</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="age">Age :</label>
-                    <input type="number" id="age" required>
-                </div>
-                <div class="form-group">
-                    <label for="gender">Gender :</label>
-                    <div class="custom-select">
-                        <i class="fas fa-mars" id="gender-icon"></i> <!-- Default male icon -->
-                        <select id="gender" required>
-                            <option value="" style="text-align: center;" disabled selected>Select Your Gender </option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="Other">Trans</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="goal">Goal :</label>
-                    <div class="custom-select">
-                        <i class="fas fa-bullseye" id="goal-icon"></i> <!-- Font Awesome icon for goal -->
-                        <select id="goal" required>
-                            <option value=""style="text-align: center;" disabled selected>Select Your Goal</option>
-                            <option value="gain">Gain Weight</option>
-                            <option value="loss">Lose Weight</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="height">Height (cm) :</label>
-                    <input type="number" id="height" required>
-                </div>
-                <div class="form-group">
-                    <label for="current-weight">Current Weight (kg) :</label>
-                    <input type="number" id="current-weight" required>
-                </div>
-                <div class="form-group">
-                    <label for="target-weight">Target Weight (kg) :</label>
-                    <input type="number" id="target-weight" required>
-                </div>
-                <div class="form-group">
-                    <label for="target-per-week">Target per Week (kg) :</label>
-                    <!-- Allows decimal input for kg values (e.g., 0.50, 1.25) -->
-                    <input type="number" id="target-per-week" step="0.01" min="0.01" required>
-                </div>
-                <button type="submit">Calculate</button>
-            </form>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="#">GYM.</a>
+            </div>
+            <!-- Hamburger icon -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Tracker</a></li>
+                <li><a href="#">Workout</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Testimonial</a></li>
+            </ul>
+            <div class="contact-button">
+                <a href="#">Contact <i class="fa-solid fa-arrow-trend-up"></i></a>
+            </div>
         </div>
-        <div id="result">
-        <h1 class="result-title">Your Result</h1>
+    </nav>
+    <div class="hero-section">
+        <div class="hero">
+            <div class="hero-text">
+                <h2>Make Your</h2>
+                <h1>Build Your Strength.</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+                <div class="hero-buttons">
+                    <button>Workout</button>
+                    <button>Tracker</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- tracker -->
+    <div class="econtainer">
+        <div class="header">
+            <h6>What We Offer</h6>
+            <h1>Achieve Amazing Results with Our Services</h1>
+            <div class="arrow">
+                <span><i class="fa-solid fa-arrow-down"></i></span>
+            </div>
+        </div>
+        <div class="services-row">
+            <div class="service-box">
+                <div class="icon">
+                    <img src="./assets/balanced-diet (1).png" alt="">
+                </div>
+                <h4>Calories Tracker</h4>
+                <p>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
+            </div>
+            <div class="service-box">
+                <div class="icon">
+                    <img src="./assets/online-fitness.png" alt="">
+                </div>
+                <h4>Workout</h4>
+                <p>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
+            </div>
+            <div class="service-box">
+                <div class="icon">
+                    <img src="./assets/online-fitness.png" alt="">
+                </div>
+                <h4>Food Tracker</h4>
+                <p>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="form-container">
+                <h1>Calories Tracker</h1>
+                <form id="gymForm">
+                    <div class="form-group">
+                        <label for="name">Name :</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age :</label>
+                        <input type="number" id="age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender : </label>
+                        <div class="custom-select" style="width: 270px;">
+                            <select id="gender" required>
+                                <option value="" disabled selected style="text-align: center;">--Select Your Gender--
+                                </option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="goal">Goal :</label>
+                        <div class="custom-select" style="width: 270px;">
+                            <select id="goal" required>
+                                <option value="" disabled selected style="text-align: center;">--Select Your Goal--
+                                </option>
+                                <option value="gain">Gain Weight</option>
+                                <option value="loss">Lose Weight</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="height">Height (cm) :</label>
+                        <input type="number" id="height" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="current-weight">Current Weight (kg) :</label>
+                        <input type="number" id="current-weight" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="target-weight">Target Weight (kg) :</label>
+                        <input type="number" id="target-weight" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="target-per-week">Target per Week (kg) :</label>
+                        <input type="number" id="target-per-week" step="0.01" min="0.01" required>
+                    </div>
+                    <button type="submit">Calculate</button>
+                </form>
+            </div>
+            <div id="result" class="hidden">
+                <h1 class="result-title">Your Result</h1>
                 <h4 class="display">Details will be shown here</h4>
+            </div>
         </div>
-    </div>
-</section>
- <script src="script.js"></script>
- </body>
+    </section>
+    <section class="promo-section">
+        <div class="promo-content">
+          <h1 class="promo-title">REGISTRATION NOW TO GET MORE DEALS</h1>
+          <p class="promo-subtitle">WHERE HEALTH, BEAUTY AND FITNESS MEET.</p>
+          <a href="#" class="promo-button">APPOINTMENT</a>
+        </div>
+      </section>
+    <section class="workout">
+        <h1>Full Body Workouts</h1>
+
+        <div class="muscle-grid">
+            <a href="chest.html" style="    background-image: url('./assets/close-up-photo-afro-american-musculary-young-man.jpg');
+            /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;" class="muscle-group">
+                <h3>Chest Workout</h3>
+            </a>
+            <a href="back.html" style="    background-image: url('./assets/portrait-young-afroamerican-sports-man-standing-back-looking-aside.jpg');
+            /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;" class="muscle-group">
+                <h3>Back Workout</h3>
+            </a>
+            <a href="legs.html" class="muscle-group">
+                <h3>Leg Workout</h3>
+            </a>
+            <a href="biceps.html" style="    background-image: url('./assets/muscular-sportsman-building-biceps-with-dumbbell.jpg');
+            /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;" class="muscle-group">
+                <h3>Biceps Workout</h3>
+            </a>
+            <a href="shoulder.html" style="    background-image: url('./assets/young-muscular-athlete-practicing-gym-with-weights.jpg');
+            /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;" class="muscle-group">
+                <h3>Shoulder Workout</h3>
+            </a>
+            <a href="core.html"  style="    background-image: url('./assets/closeup-portrait-muscular-guy-dark.jpg');
+            /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;" class="muscle-group">
+                <h3>Core Workout</h3>
+            </a>
+        </div>
+    </section>  
+    
+    <script src="script.js"></script>
+</body>
+
 </html>
