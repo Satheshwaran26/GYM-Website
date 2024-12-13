@@ -263,7 +263,6 @@ body {
         background-repeat: no-repeat;
         height: 100vh;
         overflow: hidden;
-        padding-top: 110px;
     }
 
     .hero-section::before {
