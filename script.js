@@ -79,3 +79,25 @@ hamburger.addEventListener('click', () => {
         }
         return [];
     }
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();  // Prevent default anchor click behavior
+    
+            // Get the target section from the link's href attribute
+            const targetId = this.getAttribute('href').substring(1); // Remove the "#" from href
+            const targetSection = document.getElementById(targetId);
+    
+            // Check if the section exists
+            if (targetSection) {
+                // Scroll smoothly to the target section
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            } else {
+                console.error('Target section not found: ' + targetId);
+            }
+        });
+    });
+    

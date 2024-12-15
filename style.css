@@ -13,7 +13,7 @@ body {
     padding: 0;
     margin: 0;
 
-    background: #000;
+    background: #000000;
 }
 
 /* Base styles for navbar */
@@ -105,7 +105,8 @@ body {
     background-color: white;
     display: block;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 468px) {
     .navbar-container {
         display: flex;
         z-index: 1000;
@@ -123,8 +124,10 @@ body {
         position: absolute;
         top: 100%;
         font-size: 1.4em;
-        backdrop-filter: blur(90px); /* Increased blur intensity */
-        background-color: rgba(0, 0, 0, 0.813); /* Slightly darker background */
+        backdrop-filter: blur(90px);
+        /* Increased blur intensity */
+        background-color: rgba(0, 0, 0, 0.813);
+        /* Slightly darker background */
         border: 1px solid gray;
         padding: 1rem;
         width: 100%;
@@ -257,7 +260,7 @@ body {
 
 @media (max-width: 768px) {
     .hero-section {
-      
+
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -281,7 +284,7 @@ body {
 
     .hero-text {
         max-width: 100%;
-        margin: 0 ;
+        margin: 0;
         text-align: center;
     }
 
@@ -311,9 +314,9 @@ body {
         margin: 0;
         text-align: center;
     }
-   
+
     .hero-text {
-    font-size: 1em;
+        font-size: 1em;
         margin-top: 30px;
         margin-bottom: 50px;
     }
@@ -339,7 +342,7 @@ body {
 .econtainer {
     text-align: center;
     align-items: center;
-    
+
     justify-content: center;
 }
 
@@ -360,20 +363,20 @@ body {
 
 .header h1 {
     font-size: 4em;
-    font-weight:100;
+    font-weight: 100;
     margin-bottom: 20px;
     width: 900px;
     margin-left: 490px;
 }
 
 .arrow {
-    
+
     margin: 20px 0;
     color: #fff;
 }
 
 .services-row {
-  
+
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -407,30 +410,41 @@ body {
     font-size: 1.1em;
     color: #cccccc;
 }
-@media (max-width: 576px) {
+
+@media (max-width: 478px) {
     .header h1 {
-        font-size: 2em; /* Adjusting the size for smaller screens */
-        margin: 0 auto; /* Centering the text */
-        width: auto; /* Allowing it to adapt to the screen width */
+        font-size: 2em;
+        /* Adjusting the size for smaller screens */
+        margin: 0 auto;
+        /* Centering the text */
+        width: auto;
+        /* Allowing it to adapt to the screen width */
     }
 
     .service-box {
-        width: 100%; /* Making service boxes stack */
-        padding: 10px; /* Reducing padding for better fit */
+        width: 100%;
+        /* Making service boxes stack */
+        padding: 10px;
+        /* Reducing padding for better fit */
     }
 
     .service-box p {
-        width: auto; /* Letting the text adapt to the container */
-        margin: 0 auto; /* Center the paragraph text */
+        width: auto;
+        /* Letting the text adapt to the container */
+        margin: 0 auto;
+        /* Center the paragraph text */
     }
 
     .services-row {
-        flex-direction: column; /* Ensuring vertical stacking */
-        align-items: center; /* Aligning items to the center */
+        flex-direction: column;
+        /* Ensuring vertical stacking */
+        align-items: center;
+        /* Aligning items to the center */
     }
 
     .icon img {
-        width: 60px; /* Adjusting icon size for better fit */
+        width: 60px;
+        /* Adjusting icon size for better fit */
         height: 60px;
     }
 }
@@ -452,7 +466,7 @@ section {
     flex-wrap: wrap;
     max-width: 1600px;
     width: 100%;
-    
+
     padding: 30px;
 }
 
@@ -461,7 +475,7 @@ section {
     flex: 1;
     border: 1px solid #333;
     padding: 20px;
-    
+
     min-width: 300px;
 }
 
@@ -469,7 +483,7 @@ section {
     background-color: #0000;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 50px;
-    
+
     background-image: url('./assets/portrait-young-afroamerican-sports-man-standing-back-looking-aside.jpg');
     /* Replace with your image URL */
     background-size: cover;
@@ -480,7 +494,7 @@ section {
 
 .form-container h1 {
     font-size: 2.4em;
-    font-weight:100;
+    font-weight: 100;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -571,8 +585,8 @@ button:hover {
 .result-title {
     font-size: 2.4em;
     color: #fff;
-    text-align: center
-    ;font-weight:100;
+    text-align: center;
+    font-weight: 100;
 }
 
 .calorie-intake {
@@ -714,6 +728,7 @@ button:hover {
         padding: 10px;
     }
 }
+
 .promo-section {
     position: relative;
     height: 500px;
@@ -721,41 +736,43 @@ button:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url('./assets/dumbbells-set-against-dark-background-floor.jpg'); /* Replace with your image URL */
+    background-image: url('./assets/dumbbells-set-against-dark-background-floor.jpg');
+    /* Replace with your image URL */
     background-size: cover;
     background-position: center;
     color: white;
-  }
-  
-  .promo-section::before {
+}
+
+.promo-section::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+    background: rgba(0, 0, 0, 0.5);
+    /* Adds a dark overlay */
     z-index: 1;
-  }
-  
-  .promo-content {
+}
+
+.promo-content {
     position: relative;
     z-index: 2;
-  }
-  
-  .promo-title {
+}
+
+.promo-title {
     font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 1rem;
-  }
-  
-  .promo-subtitle {
+}
+
+.promo-subtitle {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-  }
-  
-  .promo-button {
+}
+
+.promo-button {
     display: inline-block;
     padding: 0.8rem 2rem;
     font-size: 1rem;
@@ -767,63 +784,78 @@ button:hover {
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
-  }
-  
-  .promo-button:hover {
+}
+
+.promo-button:hover {
     background: orange;
     color: white;
-  }
-  
-  /* Responsive Styling */
-  @media (max-width: 768px) {
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
     .promo-section {
-      height: 400px; /* Reduce the section height for smaller screens */
+        height: 300px;
+        /* Reduce the section height for smaller screens */
     }
-  
+
     .promo-title {
-      font-size: 2rem; /* Adjust font size */
+        font-size: 2rem;
+        /* Adjust font size */
     }
-  
+
     .promo-subtitle {
-      font-size: 1rem; /* Adjust font size */
-      margin-bottom: 1rem; /* Reduce spacing */
+        font-size: 1rem;
+        /* Adjust font size */
+        margin-bottom: 1rem;
+        /* Reduce spacing */
     }
-  
+
     .promo-button {
-      padding: 0.6rem 1.5rem; /* Adjust button padding */
-      font-size: 0.9rem; /* Reduce button font size */
+        padding: 0.6rem 1.5rem;
+        /* Adjust button padding */
+        font-size: 0.9rem;
+        /* Reduce button font size */
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .promo-section {
-      height: 300px; /* Further reduce the section height for very small screens */
+        height: 300px;
+        /* Further reduce the section height for very small screens */
     }
-  
+
     .promo-title {
-      font-size: 1.5rem; /* Reduce font size further */
+        font-size: 1.5rem;
+        /* Reduce font size further */
     }
-  
+
     .promo-subtitle {
-      font-size: 0.9rem; /* Further adjust subtitle size */
+        font-size: 0.9rem;
+        /* Further adjust subtitle size */
     }
-  
+
     .promo-button {
-      padding: 0.5rem 1rem; /* Adjust padding for very small screens */
-      font-size: 0.8rem; /* Further reduce button font size */
+        padding: 0.5rem 1rem;
+        /* Adjust padding for very small screens */
+        font-size: 0.8rem;
+        /* Further reduce button font size */
     }
-  }
-  
+}
+
 .workout {
     display: flex;
-    flex-direction: row; /* Reverse the order of the items */
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Ensure text alignment is centered */
+    flex-direction: row;
+    /* Reverse the order of the items */
+    align-items: center;
+    /* Center items horizontally */
+    text-align: center;
+    /* Ensure text alignment is centered */
 }
 
 .workout h1 {
-    display: inline-block;  
-    margin-top: 10px; /* Add space between the h1 and p tags */
+    display: inline-block;
+    margin-top: 10px;
+    /* Add space between the h1 and p tags */
     color: silver;
     font-weight: 100;
     font-size: 4.5em;
@@ -841,7 +873,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    margin: 30px auto   ;
+    margin: 30px auto;
     max-width: 1200px;
     padding: 0 15px;
     width: 50%;
@@ -855,7 +887,7 @@ button:hover {
     cursor: pointer;
     border: 4px solid #333;
     display: flex;
-    width:300px;
+    width: 300px;
     height: 300px;
 
     align-items: center;
@@ -877,26 +909,33 @@ button:hover {
     background-color: #656464;
     border-color: #313131;
 }
+
 /* Mobile devices (smaller screens) */
 @media (max-width: 768px) {
     .workout {
-        flex-direction: column; /* Stack items vertically */
-        text-align: center; /* Center content */
-        align-items: center; /* Align flex items */
+        flex-direction: column;
+        /* Stack items vertically */
+        text-align: center;
+        /* Center content */
+        align-items: center;
+        /* Align flex items */
     }
 
     .workout h1 {
         font-size: 2.5em;
-        margin-left: 0; /* Remove margin-left for smaller screens */
+        margin-left: 0;
+        /* Remove margin-left for smaller screens */
     }
 
     .muscle-grid {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 1fr;
+        /* Single column layout */
         width: 90%;
     }
 
     .muscle-group {
-        width: 100%; /* Full width for cards */
+        width: 100%;
+        /* Full width for cards */
     }
 }
 
@@ -904,16 +943,20 @@ button:hover {
 @media (max-width: 480px) {
     .workout h1 {
         font-size: 2em;
-        margin-top: 15px; /* Add some spacing for small screens */
+        margin-top: 15px;
+        /* Add some spacing for small screens */
     }
 
     .workout p {
-        font-size: 1em; /* Adjust font size for readability */
+        font-size: 1em;
+        /* Adjust font size for readability */
     }
 
     .muscle-group {
-        height: auto; /* Allow height to adjust naturally */
-        padding: 20px; /* Add padding inside the cards */
+        height: auto;
+        /* Allow height to adjust naturally */
+        padding: 20px;
+        /* Add padding inside the cards */
     }
 }
 
@@ -932,7 +975,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     font-size: 6rem;
-      color: transparent;
+    color: transparent;
     -webkit-text-stroke: 1px #ffffff;
     margin-bottom: 2rem;
     letter-spacing: 2px;
@@ -974,51 +1017,68 @@ button:hover {
     line-height: 1.5;
     font-weight: 200;
 }
+
 /* Mobile devices (up to 768px) */
 @media (max-width: 768px) {
     .scontainer {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center align all items */
-        padding: 0 15px; /* Add padding for better spacing */
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center align all items */
+        padding: 0 15px;
+        /* Add padding for better spacing */
     }
 
     .heading {
-        font-size: 4rem; /* Reduce font size for smaller screens */
+        font-size: 4rem;
+        /* Reduce font size for smaller screens */
         margin-bottom: 1.5rem;
     }
 
     .cards {
-        flex-direction: column; /* Stack cards vertically */
-        gap: 20px; /* Adjust gap between cards */
-        align-items: center; /* Center-align cards */
+        flex-direction: column;
+        /* Stack cards vertically */
+        gap: 20px;
+        /* Adjust gap between cards */
+        align-items: center;
+        /* Center-align cards */
     }
 
     .card {
-        width: 90%; /* Reduce card width for smaller screens */
-        padding: 15px; /* Adjust padding for better proportions */
+        width: 90%;
+        /* Reduce card width for smaller screens */
+        padding: 15px;
+        /* Adjust padding for better proportions */
     }
 
     .card img {
-        width: 100%; /* Make the image responsive to card width */
-        height: auto; /* Maintain aspect ratio */
+        width: 100%;
+        /* Make the image responsive to card width */
+        height: auto;
+        /* Maintain aspect ratio */
     }
 }
 
 /* Small mobile screens (up to 480px) */
 @media (max-width: 480px) {
     .heading {
-        font-size: 3rem; /* Further reduce font size for very small screens */
+        font-size: 3rem;
+        /* Further reduce font size for very small screens */
         margin-bottom: 1rem;
-        letter-spacing: 1px; /* Adjust spacing for readability */
+        letter-spacing: 1px;
+        /* Adjust spacing for readability */
     }
 
     .card h3 {
-        font-size: 1.2rem; /* Adjust heading size inside the card */
+        font-size: 1.2rem;
+        /* Adjust heading size inside the card */
     }
 
     .card p {
-        font-size: 0.9rem; /* Adjust paragraph font size */
-        line-height: 1.4; /* Slightly tighter line spacing */
+        font-size: 0.9rem;
+        /* Adjust paragraph font size */
+        line-height: 1.4;
+        /* Slightly tighter line spacing */
     }
 }
 
@@ -1030,14 +1090,14 @@ button:hover {
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
-   
+
 }
 
 .logoe {
     text-align: center;
-   
+
     border-radius: 4px;
-    padding: 50px 0px ;
+    padding: 50px 0px;
     width: 250px;
     margin-left: 50px;
     display: flex;
@@ -1047,7 +1107,7 @@ button:hover {
 
 .logoe img {
     width: 100;
-      height: auto;
+    height: auto;
     opacity: 0.4;
 }
 
@@ -1064,65 +1124,67 @@ button:hover {
     max-width: 1200px;
     margin: 50px auto;
     gap: 20px;
-  }
-  
-  .contact-info {
+}
+
+.contact-info {
     flex: 1 1 40%;
     padding: 20px;
-  }
-  
-  .contact-title {
+}
+
+.contact-title {
     font-size: 3em;
     font-weight: 300;
     margin-bottom: 20px;
-  }
-  
-  .contact-description {
+}
+
+.contact-description {
     font-size: 1rem;
     margin-bottom: 30px;
     line-height: 1.6;
-  }
-  
-  .contact-details .contact-address {
+}
+
+.contact-details .contact-address {
     margin-bottom: 20px;
-  }
-  
-  .contact-form-section {
+}
+
+.contact-form-section {
     flex: 1 1 55%;
     margin-top: 90px;
-  }
-  
-  .contact-form {
+}
+
+.contact-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-  }
-  
-  .form-row {
+}
+
+.form-row {
     display: flex;
     gap: 15px;
-  }
-  
-  .input-field, .input-textarea, .form-submit-button {
+}
+
+.input-field,
+.input-textarea,
+.form-submit-button {
     width: 100%;
     height: 60px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1.2em;
-  }
-  
-  .input-field {
+}
+
+.input-field {
     flex: 1;
-  }
-  
-  .input-textarea {
+}
+
+.input-textarea {
     resize: none;
     height: 60px;
     background: #000;
-  }
-  
-  .form-submit-button {
+}
+
+.form-submit-button {
 
     color: #fff;
     font-size: 1rem;
@@ -1130,10 +1192,10 @@ button:hover {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
+}
 
-  .testimonials-container {
+
+.testimonials-container {
     max-width: 1500px;
     margin: 0 auto;
     padding: 50px 20px;
@@ -1150,7 +1212,8 @@ button:hover {
     font-size: 36px;
     font-weight: 200;
     margin: 0;
-    color: #efe7e6; /* Accent color */
+    color: #efe7e6;
+    /* Accent color */
 }
 
 .testimonials-header h1 span {
@@ -1164,8 +1227,10 @@ button:hover {
 
 .testimonial-list {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap on small screens */
-    justify-content: center; /* Center the cards */
+    flex-wrap: wrap;
+    /* Allow items to wrap on small screens */
+    justify-content: center;
+    /* Center the cards */
     gap: 20px;
 }
 
@@ -1177,7 +1242,8 @@ button:hover {
     flex: 0 0 350px;
     box-sizing: border-box;
     color: #fff;
-    text-align: center; /* Align content inside the card */
+    text-align: center;
+    /* Align content inside the card */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1222,24 +1288,30 @@ button:hover {
 }
 
 /* Responsive Styles for Mobile */
-@media (max-width: 768px) {
+@media (max-width: 468px) {
     .testimonials-header h1 {
-        font-size: 28px; /* Adjust header size */
+        font-size: 28px;
+        /* Adjust header size */
     }
 
     .testimonials-header p {
-        font-size: 1.1em; /* Adjust text size */
+        font-size: 1.1em;
+        /* Adjust text size */
     }
 
     .testimonial-card {
-        flex: 0 0 100%; /* Make the cards take full width on smaller screens */
+        flex: 0 0 100%;
+        /* Make the cards take full width on smaller screens */
     }
-    
+
     .testimonial-list {
-        flex-direction: column; /* Stack the cards vertically */
-        align-items: center; /* Center the cards */
+        flex-direction: column;
+        /* Stack the cards vertically */
+        align-items: center;
+        /* Center the cards */
     }
 }
+
 /* General Container */
 .ccontainer {
     display: flex;
@@ -1247,14 +1319,18 @@ button:hover {
     padding: 20px;
     max-width: 1800px;
     margin: 80px auto;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    flex-wrap: wrap;
+    /* Allow items to wrap on smaller screens */
 }
 
 /* Left, Center, Right Sections */
-.left, .center, .right {
+.left,
+.center,
+.right {
     flex: 1;
     margin: 0 10px;
-    text-align: center; /* Center-align text for mobile */
+    text-align: center;
+    /* Center-align text for mobile */
 }
 
 /* Logo Footer */
@@ -1287,7 +1363,8 @@ button:hover {
 }
 
 /* Center Section Heading */
-.center h2, .right h2 {
+.center h2,
+.right h2 {
     font-size: 2em;
     font-weight: 200;
     margin: 0;
@@ -1366,7 +1443,7 @@ button:hover {
 }
 
 /* Mobile Specific Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 468px) {
     .ccontainer {
         flex-direction: column;
         align-items: center;
@@ -1374,11 +1451,14 @@ button:hover {
     }
 
     /* Adjusting Left, Center, and Right Sections */
-    .left, .center, .right {
+    .left,
+    .center,
+    .right {
         margin: 10px 0;
         flex: 1;
         max-width: 100%;
-        text-align: center; /* Center-align for better appearance */
+        text-align: center;
+        /* Center-align for better appearance */
     }
 
     /* Center Section Margins */
@@ -1389,7 +1469,8 @@ button:hover {
 
     /* Gallery Adjustments for Small Screens */
     .gallery {
-        grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+        grid-template-columns: 1fr 1fr;
+        /* 2 columns on mobile */
         gap: 15px;
     }
 
@@ -1401,12 +1482,14 @@ button:hover {
 
     /* Newsletter Input and Button Adjustments */
     .right .newsletter input[type="email"] {
-        width: 100%; /* Full width */
+        width: 100%;
+        /* Full width */
         margin-bottom: 10px;
     }
 
     .right .newsletter button {
-        width: 100%; /* Button now takes full width */
+        width: 100%;
+        /* Button now takes full width */
         margin-top: 10px;
     }
 
