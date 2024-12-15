@@ -25,24 +25,23 @@
             <div class="logo">
                 <a href="#">GYM.</a>
             </div>
-            <!-- Hamburger icon -->
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <ul class="nav-links" id="nav-links">
-
                 <li><a href="#">Offers</a></li>
                 <li><a href="#">Tracker</a></li>
                 <li><a href="#">Workout</a></li>
                 <li><a href="#">Testimonial</a></li>
             </ul>
             <div class="contact-button">
-                <a href="#">Contact <i class="fa-solid fa-arrow-trend-up"></i></a>
+                <a href="#">Contact</a>
             </div>
         </div>
     </nav>
+    
     <div class="hero-section">
         <div class="hero">
             <div class="hero-text">
@@ -258,10 +257,7 @@
             <p>These testimonials serve as a testament to our commitment to helping individuals achieve their goals and
                 fostering a supportive environment.</p>
         </div>
-
-        <div class="earrow left" id="left-arrow"><i class="fas fa-chevron-left"></i></div>
-        <div class="earrow right" id="right-arrow"><i class="fas fa-chevron-right"></i></div>
-
+    
         <div class="testimonial-list" id="testimonial-list">
             <!-- Testimonial Cards -->
             <div class="testimonial-card">
@@ -303,34 +299,9 @@
                 <h3>Sarah Wilson</h3>
                 <h4>Marketing Specialist</h4>
             </div>
-            <div class="testimonial-card">
-                <img src="./assets/testimonial/te (5).jpg" alt="Person 3">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <p>Professional guidance and a positive atmosphere make this place stand out.</p>
-                <h3>Sarah Wilson</h3>
-                <h4>Marketing Specialist</h4>
-            </div>
-            <div class="testimonial-card">
-                <img src="./assets/testimonial/te (4).jpg" alt="Person 3">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <p>Professional guidance and a positive atmosphere make this place stand out.</p>
-                <h3>Sarah Wilson</h3>
-                <h4>Marketing Specialist</h4>
-            </div>
         </div>
     </div>
+    
     <div class="ccontainer">
         <div class="left">
             <a href="#" class="logo-footer">GYM.</a>
@@ -379,60 +350,45 @@
         Copyright &copy; 2024 Web Design Mastery. All rights reserved.
     </div>
 
-    <!-- testimonials -->
-    <!-- AOS JS -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            AOS.init({
-                duration: 1000, // Animation duration in milliseconds
-                once: true,     // Animation should occur only once
-                offset: 200,    // Offset from the trigger point (in pixels)
-            });
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            AOS.init({
-                duration: 1000, // Animation duration
-                once: true,     // Animation occurs only once
-            });
-        });
-    </script>
+    
 
-    <script>
-        const testimonialList = document.getElementById('testimonial-list');
-        const leftArrow = document.getElementById('left-arrow');
-        const rightArrow = document.getElementById('right-arrow');
+    <!-- <script>
+       const testimonialList = document.getElementById('testimonial-list');
+const leftArrow = document.getElementById('left-arrow');
+const rightArrow = document.getElementById('right-arrow');
 
-        const testimonials = document.querySelectorAll('.testimonial-card');
-        const scrollAmount = 320; // Adjust scroll amount to match card width
+const testimonials = document.querySelectorAll('.testimonial-card');
+const scrollAmount = 320;  // Adjust scroll amount to match card width
 
-        // Duplicate the testimonials for infinite scrolling
-        const clonedTestimonials = [...testimonials].map(testimonial => testimonial.cloneNode(true));
-        clonedTestimonials.forEach(testimonial => {
-            testimonialList.appendChild(testimonial);
-        });
+// Duplicate the testimonials for infinite scrolling
+const clonedTestimonials = [...testimonials].map(testimonial => testimonial.cloneNode(true));
+clonedTestimonials.forEach(testimonial => {
+    testimonialList.appendChild(testimonial);
+});
 
-        // Scroll left
-        leftArrow.addEventListener('click', () => {
-            if (testimonialList.scrollLeft === 0) {
-                testimonialList.scrollLeft = testimonialList.scrollWidth / 2;
-            }
-            testimonialList.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        });
+// Scroll left
+leftArrow.addEventListener('click', () => {
+    if (testimonialList.scrollLeft === 0) {
+        testimonialList.scrollLeft = testimonialList.scrollWidth / 2;
+    }
+    testimonialList.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth',
+    });
+});
 
-        // Scroll right
-        rightArrow.addEventListener('click', () => {
-            if (testimonialList.scrollLeft + testimonialList.offsetWidth >= testimonialList.scrollWidth) {
-                testimonialList.scrollLeft = testimonialList.scrollWidth / 2 - testimonialList.offsetWidth;
-            }
-            testimonialList.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-    </script>
+// Scroll right
+rightArrow.addEventListener('click', () => {
+    if (testimonialList.scrollLeft + testimonialList.offsetWidth >= testimonialList.scrollWidth) {
+        testimonialList.scrollLeft = testimonialList.scrollWidth / 2 - testimonialList.offsetWidth;
+    }
+    testimonialList.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth',
+    });
+});
+
+    </script> -->
     <script src="script.js"></script>
 </body>
 

@@ -1,8 +1,8 @@
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
+    console.log('Hamburger clicked!');
     navLinks.classList.toggle('active');
 });
 
@@ -79,37 +79,3 @@ hamburger.addEventListener('click', () => {
         }
         return [];
     }
-
-    const testimonialList = document.getElementById('testimonial-list');
-const leftArrow = document.getElementById('left-arrow');
-const rightArrow = document.getElementById('right-arrow');
-
-const testimonials = document.querySelectorAll('.testimonial-card');
-const scrollAmount = 320; // Adjust scroll amount to match card width
-
-// Duplicate the testimonials for infinite scrolling
-testimonials.forEach(testimonial => {
-    testimonialList.appendChild(testimonial.cloneNode(true));
-});
-
-// Scroll left
-leftArrow.addEventListener('click', () => {
-    if (testimonialList.scrollLeft === 0) {
-        testimonialList.scrollLeft = testimonialList.scrollWidth / 2;
-    }
-    testimonialList.scrollBy({
-        left: -scrollAmount,
-        behavior: 'smooth'
-    });
-});
-
-// Scroll right
-rightArrow.addEventListener('click', () => {
-    if (testimonialList.scrollLeft + testimonialList.offsetWidth >= testimonialList.scrollWidth) {
-        testimonialList.scrollLeft = testimonialList.scrollWidth / 2 - testimonialList.offsetWidth;
-    }
-    testimonialList.scrollBy({
-        left: scrollAmount,
-        behavior: 'smooth'
-    });
-});

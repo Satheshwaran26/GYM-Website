@@ -1133,7 +1133,7 @@ button:hover {
   }
   
 
-.testimonials-container {
+  .testimonials-container {
     max-width: 1500px;
     margin: 0 auto;
     padding: 50px 20px;
@@ -1164,11 +1164,9 @@ button:hover {
 
 .testimonial-list {
     display: flex;
-    overflow: hidden;
-    gap: 20px;
-    
-    position: relative;
+    flex-wrap: wrap; /* Allow items to wrap on small screens */
     justify-content: center; /* Center the cards */
+    gap: 20px;
 }
 
 .testimonial-card {
@@ -1184,7 +1182,6 @@ button:hover {
 }
 
 .testimonial-card:hover {
-
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
 }
 
@@ -1224,125 +1221,116 @@ button:hover {
     margin: 0;
 }
 
-.earrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2.5em;
-    color: #d1cbcb; /* Accent color */
-border: 1px solid #333;
-    border-radius: 50%;
-   
-    padding: 3px 18px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    z-index: 10;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.earrow.left {
-    left: -100px;
-
-    top: 100px;
-}
-
-.earrow.right {
-    right: -100px;
-    top: 100px;
-}
-
+/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
-    .earrow.left {
-        left: -20px;
+    .testimonials-header h1 {
+        font-size: 28px; /* Adjust header size */
     }
-    .earrow.right {
-        right: -20px;
+
+    .testimonials-header p {
+        font-size: 1.1em; /* Adjust text size */
     }
 
     .testimonial-card {
-        flex: 0 0 80%;
+        flex: 0 0 100%; /* Make the cards take full width on smaller screens */
+    }
+    
+    .testimonial-list {
+        flex-direction: column; /* Stack the cards vertically */
+        align-items: center; /* Center the cards */
     }
 }
-
+/* General Container */
 .ccontainer {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    max-width: 1600px;
-  
+    max-width: 1800px;
     margin: 80px auto;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
+/* Left, Center, Right Sections */
 .left, .center, .right {
     flex: 1;
     margin: 0 10px;
+    text-align: center; /* Center-align text for mobile */
 }
 
-.logo-footer{
+/* Logo Footer */
+.logo-footer {
     font-family: "Orbitron", sans-serif;
     color: white;
     font-weight: 200;
     font-size: 2em;
     text-decoration: none;
 }
+
+/* Contact Info */
 .contact-info {
+    text-align: left;
     font-size: 1.2em;
+    width: 700px;
     color: #ccc;
     margin-bottom: 20px;
 }
+
 .contact-info p i {
+    text-align: left;
     margin-right: 10px;
 }
+
+/* Left Section Text */
 .left p {
     margin: 10px 0;
     font-weight: 100;
 }
+
+/* Center Section Heading */
 .center h2, .right h2 {
     font-size: 2em;
-font-weight: 200;
+    font-weight: 200;
     margin: 0;
 }
-.center h2{
+
+.center h2 {
     margin-bottom: 20px;
 }
-.center{
-    margin-left: 150px;
-}
+
+/* Gallery */
 .gallery {
-    width: 280px;
-    height: 100px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    gap: 10px; /* Removes gaps between grid items */
-  }
-  
-  .gallery img {
-    width: 90px; /* Ensure images fill the container */
+    width: 100%;
     height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
 
-    margin: 0; /* No extra margins */
-    padding: 0;
-  }
-  
+.gallery img {
+    width: 100%;
+    height: auto;
+}
 
+/* Newsletter Section */
 .right .newsletter p {
     margin: 10px 0;
     font-weight: 100;
 }
 
+/* Email Input */
 .right .newsletter input[type="email"] {
     padding: 10px;
     width: calc(100% - 120px);
-   
     border-bottom: 1px solid #fff;
     border-left: 0;
     border-right: 0;
     border-top: 0;
-    border-radius: 0px;
-    background-color: #000000;
+    border-radius: 0;
+    background-color: #000;
     color: #fff;
 }
 
+/* Newsletter Button */
 .right .newsletter button {
     padding: 10px 20px;
     background-color: #292929;
@@ -1352,6 +1340,7 @@ font-weight: 200;
     cursor: pointer;
 }
 
+/* Social Icons */
 .right .social-icons {
     margin-top: 20px;
 }
@@ -1367,25 +1356,66 @@ font-weight: 200;
     color: #e50914;
 }
 
+/* Footer Section */
 .footer {
     text-align: center;
     padding: 20px;
-    font-size:1.1em;
+    font-size: 1.1em;
     color: #888;
     background-color: #000;
 }
 
+/* Mobile Specific Adjustments */
 @media (max-width: 768px) {
-    .container {
+    .ccontainer {
         flex-direction: column;
         align-items: center;
+        padding: 20px;
     }
 
+    /* Adjusting Left, Center, and Right Sections */
     .left, .center, .right {
         margin: 10px 0;
+        flex: 1;
+        max-width: 100%;
+        text-align: center; /* Center-align for better appearance */
     }
 
+    /* Center Section Margins */
+    .center {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    /* Gallery Adjustments for Small Screens */
+    .gallery {
+        grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+        gap: 15px;
+    }
+
+    /* Social Icons Resize */
+    .right .social-icons a {
+        font-size: 20px;
+        margin: 0 8px;
+    }
+
+    /* Newsletter Input and Button Adjustments */
     .right .newsletter input[type="email"] {
-        width: calc(100% - 100px);
+        width: 100%; /* Full width */
+        margin-bottom: 10px;
+    }
+
+    .right .newsletter button {
+        width: 100%; /* Button now takes full width */
+        margin-top: 10px;
+    }
+
+    /* Footer Text Adjustments */
+    .footer {
+        font-size: 1em;
+    }
+
+    .footer p {
+        font-size: 0.9em;
     }
 }
