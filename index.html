@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
+    <title>GYM Website</title>
     <link rel="stylesheet" href="style.css">
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
         integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -15,6 +15,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 
 <body>
@@ -30,11 +32,10 @@
                 <span></span>
             </div>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+
+                <li><a href="#">Offers</a></li>
                 <li><a href="#">Tracker</a></li>
                 <li><a href="#">Workout</a></li>
-                <li><a href="#">Product</a></li>
                 <li><a href="#">Testimonial</a></li>
             </ul>
             <div class="contact-button">
@@ -42,46 +43,47 @@
             </div>
         </div>
     </nav>
-    <div class="hero-section">
+    <div class="hero-section" data-aos="fade-up">
         <div class="hero">
             <div class="hero-text">
-                <h2>Make Your</h2>
-                <h1>Build Your Strength.</h1>
-                <p>
+                <h2 data-aos="fade-right" data-aos-duration="1000">Make Your</h2>
+                <h1 data-aos="fade-left" data-aos-duration="1000">Build Your Strength.</h1>
+                <p data-aos="fade-up" data-aos-duration="1000">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
-                <div class="hero-buttons">
+                <div class="hero-buttons" data-aos="zoom-in" data-aos-duration="1000">
                     <button>Workout</button>
                     <button>Tracker</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- tracker -->
-    <div class="econtainer">
+
+    <!-- Tracker Section -->
+    <div class="econtainer" data-aos="fade-up" data-aos-duration="1000">
         <div class="header">
-            <h6>What We Offer</h6>
-            <h1>Achieve Amazing Results with Our Website</h1>
-            <div class="arrow">
+            <h6 data-aos="fade-down" data-aos-duration="800">What We Offer</h6>
+            <h1 data-aos="fade-right" data-aos-duration="1000">Achieve Amazing Results with Our Website</h1>
+            <div class="arrow" data-aos="zoom-in" data-aos-delay="200">
                 <span><img src="./assets/down-arrow (2).png" width="50px" alt=""></span>
             </div>
         </div>
         <div class="services-row">
-            <div class="service-box">
+            <div class="service-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="icon">
                     <img src="./assets/calories-calculator.png" alt="">
                 </div>
                 <h4>Calories Tracker</h4>
                 <p>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
             </div>
-            <div class="service-box">
+            <div class="service-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                 <div class="icon">
                     <img src="./assets/online-fitness.png" alt="">
                 </div>
                 <h4>Workout</h4>
                 <p>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
             </div>
-            <div class="service-box">
+            <div class="service-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                 <div class="icon">
                     <img src="./assets/whey (1).png" alt="">
                 </div>
@@ -90,6 +92,7 @@
             </div>
         </div>
     </div>
+
     <section>
         <div class="container">
             <div class="form-container">
@@ -153,16 +156,16 @@
     </section>
     <section class="promo-section">
         <div class="promo-content">
-          <h1 class="promo-title">REGISTRATION NOW TO GET MORE DEALS</h1>
-          <p class="promo-subtitle">WHERE HEALTH, BEAUTY AND FITNESS MEET.</p>
-          <a href="#" class="promo-button">APPOINTMENT</a>
+            <h1 class="promo-title">REGISTRATION NOW TO GET MORE DEALS</h1>
+            <p class="promo-subtitle">WHERE HEALTH, BEAUTY AND FITNESS MEET.</p>
+            <a href="#" class="promo-button">APPOINTMENT</a>
         </div>
-      </section>
+    </section>
     <section class="workout">
         <h1>Full Body Workouts.</h1>
 
         <div class="muscle-grid">
-            <a href="chest.html"  target="_blank"style="    background-image: url('./assets/close-up-photo-afro-american-musculary-young-man.jpg');
+            <a href="chest.html" target="_blank" style="    background-image: url('./assets/close-up-photo-afro-american-musculary-young-man.jpg');
             /* Replace with your image URL */
             background-size: cover;
             background-position: center;
@@ -183,7 +186,7 @@
             background-repeat: no-repeat;" class="muscle-group">
                 <h3>Leg Workout</h3>
             </a>
-            <a href="biceps.html"  target="_blank" style="    background-image: url('./assets/muscular-sportsman-building-biceps-with-dumbbell.jpg');
+            <a href="biceps.html" target="_blank" style="    background-image: url('./assets/muscular-sportsman-building-biceps-with-dumbbell.jpg');
             /* Replace with your image URL */
             background-size: cover;
             background-position: center;
@@ -198,7 +201,7 @@
              " class="muscle-group">
                 <h3>Shoulder Workout</h3>
             </a>
-            <a href="core.html"  target="_blank" style="    background-image: url('./assets/OIP.jpeg');
+            <a href="core.html" target="_blank" style="    background-image: url('./assets/OIP.jpeg');
             /* Replace with your image URL */
             background-size: cover;
             background-position: center;
@@ -207,8 +210,8 @@
             </a>
         </div>
 
-    </section>  
-   
+    </section>
+
     <div class="script">
         <h1 class="heading">WHAT I OFFER</h1>
         <div class="cards">
@@ -246,34 +249,188 @@
             <img src="./assets/icon.png" alt="Fitness Club Logo">
         </div>
     </div>
-    <div class="contact-container">
-        <div class="contact-info">
-          <h1 class="contact-title">ASK US ANYTHING</h1>
-          <p class="contact-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Suspendisse interdum nulla eu posuere scelerisque.
-          </p>
-          <div class="contact-details">
-            <p class="contact-address">
-              251 Purple Sunset Avenue<br>
-              Brooklyn, BXY 92101<br>
-              powerlift@example.com
-            </p>
-        
-          </div>
+    <!-- testimonials -->
+    <div class="testimonials-container">
+        <div class="testimonials-header">
+            <h1>What People <span>Says</span> About Us?</h1>
+            <p>These testimonials serve as a testament to our commitment to helping individuals achieve their goals and
+                fostering a supportive environment.</p>
         </div>
-        <div class="contact-form-section">
-          <form class="contact-form">
-            <div class="form-row">
-              <input type="text" class="input-field" placeholder="Your full name" required>
-              <input type="email" class="input-field" placeholder="E-mail address" required>
+
+        <div class="earrow left" id="left-arrow"><i class="fas fa-chevron-left"></i></div>
+        <div class="earrow right" id="right-arrow"><i class="fas fa-chevron-right"></i></div>
+
+        <div class="testimonial-list" id="testimonial-list">
+            <!-- Testimonial Cards -->
+            <div class="testimonial-card">
+                <img src="./assets/testimonial/te (1).jpg" alt="Person 1">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>This is a great place to achieve your fitness goals with professional guidance!</p>
+                <h3>Emily Carter</h3>
+                <h4>Registered Nurse</h4>
             </div>
-            <input type="text" class="input-field" placeholder="Subject" required>
-            <textarea class="input-textarea" placeholder="Drop us a few lines here..." rows="5" required></textarea>
-            <button type="submit" class="form-submit-button">SEND US A MESSAGE</button>
-          </form>
+            <div class="testimonial-card">
+                <img src="./assets/testimonial/te (2).jpg" alt="Person 2">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>The trainers here are amazing! I've never felt more supported.</p>
+                <h3>John Smith</h3>
+                <h4>Software Engineer</h4>
+            </div>
+            <div class="testimonial-card">
+                <img src="./assets/testimonial/te (3).jpg" alt="Person 3">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>Professional guidance and a positive atmosphere make this place stand out.</p>
+                <h3>Sarah Wilson</h3>
+                <h4>Marketing Specialist</h4>
+            </div>
+            <div class="testimonial-card">
+                <img src="./assets/testimonial/te (5).jpg" alt="Person 3">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>Professional guidance and a positive atmosphere make this place stand out.</p>
+                <h3>Sarah Wilson</h3>
+                <h4>Marketing Specialist</h4>
+            </div>
+            <div class="testimonial-card">
+                <img src="./assets/testimonial/te (4).jpg" alt="Person 3">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>Professional guidance and a positive atmosphere make this place stand out.</p>
+                <h3>Sarah Wilson</h3>
+                <h4>Marketing Specialist</h4>
+            </div>
         </div>
-      </div>
+    </div>
+    <div class="ccontainer">
+        <div class="left">
+            <a href="#" class="logo-footer">GYM.</a>
+            <p>Welcome to FitPhysique, where we believe that every journey to fitness is unique and empowering.</p>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt" style="padding-right:15px  ; font-size: 1.2em; "></i>123 Main
+                    Street<br />Sunrise Valley, Evergreen Heights</p>
+                <p><i class="fas fa-phone-alt" style="padding-right:15px  ; font-size: 1.2em; "></i>+91 9876543210</p>
+                <p><i class="fas fa-envelope" style="padding-right:15px  ; font-size: 1.2em; "></i>info@fitphysique.com
+                </p>
+            </div>
+        </div>
+
+        <div class="center">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="./assets/gall1.png" alt="Gallery Image 1" width="100px" height="100px" />
+                <img src="./assets/gall2.png" alt="Gallery Image 1" /> 
+                <img src="./assets/gall3.png"  alt="Gallery Image 1" /> 
+                    <img src="./assets/gall4.png" alt="Gallery Image 1" /> 
+                    <img src="./assets/gall5.png" alt="Gallery Image 1" /> 
+                    <img src="./assets/gall6.png"alt="Gallery Image 1" />
+                    
+
+            </div>
+        </div>
+
+
+        <div class="right">
+            <h2>NEWSLETTER</h2>
+            <div class="newsletter">
+                <p>Don't miss out on the latest news and offers - sign up today and join our thriving fitness community!
+                </p>
+                <input type="email" placeholder="Enter Email" />
+                <button>SEND</button>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Copyright &copy; 2024 Web Design Mastery. All rights reserved.
+    </div>
+
+    <!-- testimonials -->
+    <!-- AOS JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 1000, // Animation duration in milliseconds
+                once: true,     // Animation should occur only once
+                offset: 200,    // Offset from the trigger point (in pixels)
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 1000, // Animation duration
+                once: true,     // Animation occurs only once
+            });
+        });
+    </script>
+
+    <script>
+        const testimonialList = document.getElementById('testimonial-list');
+        const leftArrow = document.getElementById('left-arrow');
+        const rightArrow = document.getElementById('right-arrow');
+
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        const scrollAmount = 320; // Adjust scroll amount to match card width
+
+        // Duplicate the testimonials for infinite scrolling
+        const clonedTestimonials = [...testimonials].map(testimonial => testimonial.cloneNode(true));
+        clonedTestimonials.forEach(testimonial => {
+            testimonialList.appendChild(testimonial);
+        });
+
+        // Scroll left
+        leftArrow.addEventListener('click', () => {
+            if (testimonialList.scrollLeft === 0) {
+                testimonialList.scrollLeft = testimonialList.scrollWidth / 2;
+            }
+            testimonialList.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        // Scroll right
+        rightArrow.addEventListener('click', () => {
+            if (testimonialList.scrollLeft + testimonialList.offsetWidth >= testimonialList.scrollWidth) {
+                testimonialList.scrollLeft = testimonialList.scrollWidth / 2 - testimonialList.offsetWidth;
+            }
+            testimonialList.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 

@@ -12,17 +12,17 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #000;
-            color: #ddd;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
+       body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000 url('./assets/close-up-photo-afro-american-musculary-young-man.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
         .container {
             padding: 20px;
             max-width: 1200px;
@@ -42,7 +42,7 @@
             padding: 20px;
             border: none;
             cursor: pointer;
-            font-size: 2em;
+            font-size: 1.5em;
             margin-right: 20px;
             /* Space between button and heading */
             display: flex;
@@ -54,37 +54,41 @@
         }
 
         h1 {
-            margin: 0;
+            margin-top: 20px;
             font-size: 2.5em;
             flex-grow: 1;
+            font-weight: 400;
         }
 
         .workout-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 40px;
             max-width: 1200px;
             justify-items: center;
             align-items: center;
-            margin: 0 auto;
+            margin:20px auto;
         }
 
         .workout-card {
-            background-color: #1c1c1c;
+            background-color: rgba(16, 16, 16, 0.321); 
+            backdrop-filter: blur(25px); /* Adds a blur effect */
+            -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
             border: 1px solid #ddd;
             border-radius: 10px;
             padding: 20px;
             text-align: center;
             position: relative;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 300px;
-            width: 100%;
-            height: 230px;
+        
+            width: 330px;
+            height: 240px;
         }
 
         .workout-card h2 {
-            font-size: 24px;
+            font-size: 1.5em;
             color: #ddd;
+            font-weight: 400;
             margin-bottom: 10px;
         }
 
@@ -106,40 +110,61 @@
         .modal {
             display: none;
             position: fixed;
-            z-index: 1;
+            z-index: 1000;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.7);
             justify-content: center;
             align-items: center;
         }
 
         .modal-content {
+            position: relative;
             background-color: white;
             padding: 20px;
             border-radius: 10px;
             max-width: 600px;
             width: 100%;
             text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            animation: slideDown 0.3s ease-in-out;
         }
 
-        .modal-content img,
-        .modal-content video {
+        .modal-content img {
             max-width: 100%;
             border-radius: 10px;
         }
 
-        .close-btn {
-            background-color: red;
-            color: white;
-            padding: 10px;
+        .close-symbol {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 2em;
+            font-weight: 500;
+            color: #868686;
             cursor: pointer;
-            margin-top: 10px;
+            transition: color 0.3s ease;
         }
 
-        /* Responsive Design */
+        .close-symbol:hover {
+            color: rgb(23, 22, 22);
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+
         @media (max-width: 768px) {
             .workout-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -181,33 +206,34 @@
         </div>
 
         <div class="workout-grid">
+
             <div class="workout-card">
-                <h2>Bench Press</h2>
+                <h2>Push-Ups</h2>
+                <p>Target Muscle: Chest, Triceps, Shoulders</p>
+                <p>Instructions: Keep your body straight and lower yourself until your chest touches the floor. Push
+                    yourself back up.</p>
+                <i class="fas fa-video video-icon" data-target="c1-modal"></i>
+            </div>
+            <div class="workout-card">
+                <h2>Dips</h2>
                 <p>Target Muscle: Chest</p>
                 <p>Instructions: Lie flat on a bench, grasp the barbell with hands shoulder-width apart, and press
                     upwards.</p>
-                <i class="fas fa-video video-icon" data-target="bench-press-modal"></i>
+                <i class="fas fa-video video-icon" data-target="c2-modal"></i>
             </div>
             <div class="workout-card">
                 <h2>Bench Press</h2>
                 <p>Target Muscle: Chest</p>
                 <p>Instructions: Lie flat on a bench, grasp the barbell with hands shoulder-width apart, and press
                     upwards.</p>
-                <i class="fas fa-video video-icon" data-target="bench-press-modal"></i>
+                <i class="fas fa-video video-icon" data-target="c3-modal"></i>
             </div>
             <div class="workout-card">
-                <h2>Bench Press</h2>
+                <h2>decline dumbbell press</h2>
                 <p>Target Muscle: Chest</p>
                 <p>Instructions: Lie flat on a bench, grasp the barbell with hands shoulder-width apart, and press
                     upwards.</p>
-                <i class="fas fa-video video-icon" data-target="bench-press-modal"></i>
-            </div>
-            <div class="workout-card">
-                <h2>Bench Press</h2>
-                <p>Target Muscle: Chest</p>
-                <p>Instructions: Lie flat on a bench, grasp the barbell with hands shoulder-width apart, and press
-                    upwards.</p>
-                <i class="fas fa-video video-icon" data-target="bench-press-modal"></i>
+                <i class="fas fa-video video-icon" data-target="c4-modal"></i>
             </div>
             <div class="workout-card">
                 <h2>Incline Dumbbell Press</h2>
@@ -218,42 +244,59 @@
             </div>
 
             <div class="workout-card">
-                <h2>Push-Ups</h2>
-                <p>Target Muscle: Chest, Triceps, Shoulders</p>
-                <p>Instructions: Keep your body straight and lower yourself until your chest touches the floor. Push
-                    yourself back up.</p>
-                <i class="fas fa-video video-icon" data-target="pushups-modal"></i>
+                <h2>Flys</h2>
+                <p>Target Muscle: Upper Chest</p>
+                <p>Instructions: Set the bench at a 45-degree angle and press the dumbbells upward in a controlled
+                    motion.</p>
+                <i class="fas fa-video video-icon" data-target="c5-modal"></i>
             </div>
         </div>
     </div>
 
     <!-- Modals -->
-    <div id="bench-press-modal" class="modal">
+    <div id="c3-modal" class="modal">
         <div class="modal-content">
-            <video controls>
-                <source src="bench-press.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <button class="close-btn">Close</button>
+            <span class="close-symbol">&times;</span>
+            <img src="./assets/chest/chest (7).gif" alt="Bench Press">
+        </div>
+    </div>
+
+    <div id="c2-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-symbol">&times;</span>
+            <img src="./assets/chest/chest (2).gif" alt="Incline Dumbbell Press">
+        </div>
+    </div>
+
+    <div id="c1-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-symbol">&times;</span>
+            <img src="./assets/chest/chest (3).gif" alt="Push-Ups">
+        </div>
+    </div>
+
+    <div id="c4-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-symbol">&times;</span>
+            <img src="./assets/chest/chest (6).gif" alt="Incline Dumbbell Press">
         </div>
     </div>
 
     <div id="incline-dumbbell-modal" class="modal">
         <div class="modal-content">
-            <img src="incline-dumbbell.gif" alt="Incline Dumbbell Press">
-            <button class="close-btn">Close</button>
+            <span class="close-symbol">&times;</span>
+            <img src="./assets/chest/chest (5).gif" alt="Incline Dumbbell Press">
         </div>
     </div>
 
-    <div id="pushups-modal" class="modal">
+    <div id="c5-modal" class="modal">
         <div class="modal-content">
-            <img src="pushups.gif" alt="Push-Ups">
-            <button class="close-btn">Close</button>
+            <span class="close-symbol">&times;</span>
+            <img src="./assets/chest/chest (4).gif" alt="Push-Ups">
         </div>
     </div>
 
     <script>
-        // Show modal when video icon is clicked
         document.querySelectorAll('.video-icon').forEach(icon => {
             icon.addEventListener('click', function () {
                 const modalId = this.getAttribute('data-target');
@@ -261,13 +304,21 @@
             });
         });
 
-        // Close modal
-        document.querySelectorAll('.close-btn').forEach(btn => {
-            btn.addEventListener('click', function () {
+        // Close modal when "X" is clicked
+        document.querySelectorAll('.close-symbol').forEach(symbol => {
+            symbol.addEventListener('click', function () {
                 this.closest('.modal').style.display = 'none';
             });
         });
 
+        // Close modal when clicking outside the modal content
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', function (event) {
+                if (event.target === this) { // Ensures only clicks on the overlay (not content) close the modal
+                    this.style.display = 'none';
+                }
+            });
+        });
         // Back button functionality
         document.getElementById('back-to-home').addEventListener('click', function () {
             window.location.href = 'index.html'; // Change this to your main file's path

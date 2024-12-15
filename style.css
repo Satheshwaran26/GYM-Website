@@ -32,9 +32,9 @@ body {
     align-items: center;
     border: 2px solid gray;
     border-radius: 50px;
-    padding: 0.5rem 1.5rem;
+    padding: 0.2rem 1.2rem;
     backdrop-filter: blur(10px);
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -1132,6 +1132,260 @@ button:hover {
     transition: background-color 0.3s ease;
   }
   
-  .form-submit-button:hover {
-    background-color: #cc0044;
+
+.testimonials-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.testimonials-header {
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+.testimonials-header h1 {
+    font-size: 36px;
+    font-weight: 200;
+    margin: 0;
+    color: #efe7e6; /* Accent color */
+}
+
+.testimonials-header h1 span {
+    color: #fff;
+}
+
+.testimonials-header p {
+    font-size: 1.3em;
+    color: #ccc;
+}
+
+.testimonial-list {
+    display: flex;
+    overflow: hidden;
+    gap: 20px;
+    
+    position: relative;
+    justify-content: center; /* Center the cards */
+}
+
+.testimonial-card {
+    border: 1px solid #333;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    flex: 0 0 350px;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center; /* Align content inside the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+}
+
+.testimonial-card img {
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+    border: 1px solid #d8d3d3;
+}
+
+.testimonial-card .stars {
+    color: #f1c40f;
+    margin-bottom: 10px;
+}
+
+.testimonial-card p {
+    font-size: 1em;
+    font-weight: 200;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+    font-size: 1.6em;
+    color: #414040;
+    font-weight: 400;
+    margin: 0;
+}
+
+.testimonial-card h4 {
+    font-size: 14px;
+    color: #888;
+    font-weight: 600;
+    margin: 0;
+}
+
+.earrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5em;
+    color: #d1cbcb; /* Accent color */
+border: 1px solid #333;
+    border-radius: 50%;
+   
+    padding: 3px 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.earrow.left {
+    left: -100px;
+
+    top: 100px;
+}
+
+.earrow.right {
+    right: -100px;
+    top: 100px;
+}
+
+@media (max-width: 768px) {
+    .earrow.left {
+        left: -20px;
+    }
+    .earrow.right {
+        right: -20px;
+    }
+
+    .testimonial-card {
+        flex: 0 0 80%;
+    }
+}
+
+.ccontainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1600px;
+  
+    margin: 80px auto;
+}
+
+.left, .center, .right {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.logo-footer{
+    font-family: "Orbitron", sans-serif;
+    color: white;
+    font-weight: 200;
+    font-size: 2em;
+    text-decoration: none;
+}
+.contact-info {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+.contact-info p i {
+    margin-right: 10px;
+}
+.left p {
+    margin: 10px 0;
+    font-weight: 100;
+}
+.center h2, .right h2 {
+    font-size: 2em;
+font-weight: 200;
+    margin: 0;
+}
+.center h2{
+    margin-bottom: 20px;
+}
+.center{
+    margin-left: 150px;
+}
+.gallery {
+    width: 280px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 10px; /* Removes gaps between grid items */
   }
+  
+  .gallery img {
+    width: 90px; /* Ensure images fill the container */
+    height: auto;
+
+    margin: 0; /* No extra margins */
+    padding: 0;
+  }
+  
+
+.right .newsletter p {
+    margin: 10px 0;
+    font-weight: 100;
+}
+
+.right .newsletter input[type="email"] {
+    padding: 10px;
+    width: calc(100% - 120px);
+   
+    border-bottom: 1px solid #fff;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-radius: 0px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.right .newsletter button {
+    padding: 10px 20px;
+    background-color: #292929;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.right .social-icons {
+    margin-top: 20px;
+}
+
+.right .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.right .social-icons a:hover {
+    color: #e50914;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size:1.1em;
+    color: #888;
+    background-color: #000;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left, .center, .right {
+        margin: 10px 0;
+    }
+
+    .right .newsletter input[type="email"] {
+        width: calc(100% - 100px);
+    }
+}
