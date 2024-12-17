@@ -1311,7 +1311,6 @@ button:hover {
         /* Center the cards */
     }
 }
-
 /* General Container */
 .ccontainer {
     display: flex;
@@ -1319,8 +1318,7 @@ button:hover {
     padding: 20px;
     max-width: 1800px;
     margin: 80px auto;
-    flex-wrap: wrap;
-    /* Allow items to wrap on smaller screens */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 /* Left, Center, Right Sections */
@@ -1329,8 +1327,7 @@ button:hover {
 .right {
     flex: 1;
     margin: 0 10px;
-    text-align: center;
-    /* Center-align text for mobile */
+    text-align: center; /* Center-align text for mobile */
 }
 
 /* Logo Footer */
@@ -1346,13 +1343,13 @@ button:hover {
 .contact-info {
     text-align: left;
     font-size: 1.2em;
-    width: 700px;
+    max-width: 700px;
     color: #ccc;
     margin-bottom: 20px;
 }
 
 .contact-info p i {
-    text-align: left;
+    text-align: center;
     margin-right: 10px;
 }
 
@@ -1367,17 +1364,12 @@ button:hover {
 .right h2 {
     font-size: 2em;
     font-weight: 200;
-    margin: 0;
-}
-
-.center h2 {
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
 }
 
 /* Gallery */
 .gallery {
     width: 100%;
-    height: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -1386,6 +1378,7 @@ button:hover {
 .gallery img {
     width: 100%;
     height: auto;
+    object-fit: cover; /* Maintain image proportions */
 }
 
 /* Newsletter Section */
@@ -1398,13 +1391,16 @@ button:hover {
 .right .newsletter input[type="email"] {
     padding: 10px;
     width: calc(100% - 120px);
+    border: none;
     border-bottom: 1px solid #fff;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    border-radius: 0;
     background-color: #000;
     color: #fff;
+    box-sizing: border-box;
+}
+
+.right .newsletter input[type="email"]:focus {
+    outline: none;
+    border-bottom: 1px solid #e50914;
 }
 
 /* Newsletter Button */
@@ -1415,6 +1411,11 @@ button:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.right .newsletter button:hover {
+    background-color: #444;
 }
 
 /* Social Icons */
@@ -1448,57 +1449,52 @@ button:hover {
         flex-direction: column;
         align-items: center;
         padding: 20px;
+        gap: 10px; /* Spacing between items */
     }
 
     /* Adjusting Left, Center, and Right Sections */
     .left,
     .center,
     .right {
+        width: 100%;
         margin: 10px 0;
-        flex: 1;
-        max-width: 100%;
         text-align: center;
-        /* Center-align for better appearance */
-    }
-
-    /* Center Section Margins */
-    .center {
-        margin-left: 0;
-        margin-bottom: 20px;
     }
 
     /* Gallery Adjustments for Small Screens */
     .gallery {
-        grid-template-columns: 1fr 1fr;
-        /* 2 columns on mobile */
-        gap: 15px;
+        grid-template-columns: 1fr 1fr; /* 2 equal columns on mobile */
+        gap: 10px;
     }
 
     /* Social Icons Resize */
     .right .social-icons a {
         font-size: 20px;
-        margin: 0 8px;
+        margin: 0 5px;
     }
 
     /* Newsletter Input and Button Adjustments */
     .right .newsletter input[type="email"] {
-        width: 100%;
-        /* Full width */
+        width: 100%; /* Full width */
         margin-bottom: 10px;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
     .right .newsletter button {
         width: 100%;
-        /* Button now takes full width */
+        padding: 10px;
         margin-top: 10px;
+        box-sizing: border-box;
     }
 
-    /* Footer Text Adjustments */
+    /* Footer Adjustments */
     .footer {
-        font-size: 1em;
+        font-size: 0.9em;
+        padding: 10px 0;
     }
 
     .footer p {
-        font-size: 0.9em;
+        margin: 5px 0;
     }
 }
