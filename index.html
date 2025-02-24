@@ -18,9 +18,24 @@
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
 </head>
 
-<body>
+<body> 
+    <div class="chat-icon" onclick="toggleChat()">
+        <img src="./assets/bot.png" alt="">
+    </div>
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            Gym Chatbot
+            <span class="close-btn" onclick="toggleChat()">✖</span>
+        </div>
+        <div class="chat-body" id="chatBody"></div>
+        <div class="chat-footer">
+            <input type="text" id="userInput" style="font-size: 1.2em;" placeholder="Ask about gym workouts...">
+            <button onclick="sendMessage()"><i class="fa-regular fa-paper-plane"></i></button>
+        </div>
+    </div>
     <nav class="navbar">
         <div class="navbar-container">
             <div class="logo">
@@ -234,7 +249,7 @@
             </div>
         </div>
     </div>
-    <div class="logo-container">
+    <div class="logo-container">    
         <div class="logoe">
             <img src="./assets/icon1.png" alt="Fitness Center Logo">
         </div>
@@ -272,7 +287,7 @@
                 </div>
                 <p>This is a great place to achieve your fitness goals with professional guidance!</p>
                 <h3>Emily Carter</h3>
-                <h4>Registered Nurse</h4>
+                <h4>Fitness</h4>
             </div>
             <div class="testimonial-card">
                 <img src="./assets/testimonial/te (2).jpg" alt="Person 2">
@@ -285,7 +300,7 @@
                 </div>
                 <p>The trainers here are amazing! I've never felt more supported.</p>
                 <h3>John Smith</h3>
-                <h4>Software Engineer</h4>
+                <h4>    Fitness</h4>
             </div>
             <div class="testimonial-card">
                 <img src="./assets/testimonial/te (3).jpg" alt="Person 3">
@@ -298,7 +313,7 @@
                 </div>
                 <p>Professional guidance and a positive atmosphere make this place stand out.</p>
                 <h3>Sarah Wilson</h3>
-                <h4>Marketing Specialist</h4>
+                <h4>Body Builder</h4>
             </div>
         </div>
     </div>
@@ -348,7 +363,7 @@
     </div>
 
     <div class="footer">
-        Copyright &copy; 2024 Web Design Mastery. All rights reserved.
+        Copyright &copy; 2024 Gym. All rights reserved.
     </div>
 
     
